@@ -1,4 +1,3 @@
-blogTest
-========
+# This used to be the data for my blog
 
-BlogTest
+Now it lives at [https://github.com/mojombo/mojombo.github.io]().
