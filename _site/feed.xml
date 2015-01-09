@@ -5,8 +5,8 @@
     <description></description>
     <link>http://Geniuze.github.io/blog/blog/</link>
     <atom:link href="http://Geniuze.github.io/blog/blog/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 09 Jan 2015 11:15:04 +0800</pubDate>
-    <lastBuildDate>Fri, 09 Jan 2015 11:15:04 +0800</lastBuildDate>
+    <pubDate>Fri, 09 Jan 2015 14:30:39 +0800</pubDate>
+    <lastBuildDate>Fri, 09 Jan 2015 14:30:39 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -34,6 +34,17 @@
         <category>jekyll</category>
         
         <category>update</category>
+        
+      </item>
+    
+      <item>
+        <title>中文测试</title>
+        <description>&lt;p&gt;这是一个中文博客&lt;/p&gt;
+</description>
+        <pubDate>Fri, 09 Jan 2015 00:00:00 +0800</pubDate>
+        <link>http://Geniuze.github.io/blog/blog/2015/01/09/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95.html</link>
+        <guid isPermaLink="true">http://Geniuze.github.io/blog/blog/2015/01/09/%E4%B8%AD%E6%96%87%E6%B5%8B%E8%AF%95.html</guid>
+        
         
       </item>
     
