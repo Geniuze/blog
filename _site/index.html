@@ -8,8 +8,8 @@
 <title>Geniuze</title>
 <link href="http://localhost/feed.xml" rel="alternate" title="Geniuze" type="application/atom+xml" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="/assets/css/site.css" />
-<link rel="stylesheet" type="text/css" href="/assets/css/code/github.css" />
+<link rel="stylesheet" type="text/css" href="/blog/assets/css/site.css" />
+<link rel="stylesheet" type="text/css" href="/blog/assets/css/code/github.css" />
 
 </head>
 
@@ -28,10 +28,11 @@
 
 
 <article content-loaded="1">
-	<h2><a href="/posts/my-tech-blogging-like-a-hacker.html">像黑客一样写自己的技术博客</a></h2>
+	<h2><a href="/blog/posts/my-tech-blogging-like-a-hacker.html">像黑客一样写自己的技术博客</a></h2>
 	<p class="meta">
-	<span class="datetime">2012-03-04</span> posted in [<a href="/category/thinking" class="category"></a>]
+	<span class="datetime">2012-03-04</span> posted in [<a href="/blog/category/another" class="category">Another Category</a>]
 </p>
+
 	<div class="article-content">
 	
 		<p>说实话，我发现自己的确是个形式主义者，工具癖，规划控……就是不想静下来仔细思考认真沉淀最后生产出点有质量的内容，而且从小就是（我曾多次准备好一个练习本规划好用来如何写组词造句等，但第一页都没写完过）。再加上重度的拖延症，偶尔稍微纠结下，曾经写点技术积累的想法就彻底夭折了。</p>
@@ -75,14 +76,16 @@
 </article>
 
 <article>
-	<h2><a href="/posts/hello-world.html">Hello world!</a></h2>
+	<h2><a href="/blog/posts/hello-world.html">Hello world!</a></h2>
 	<p class="meta">
-	<span class="datetime">2012-03-04</span> posted in [<a href="/category/default" class="category">Default Category</a>]
+	<span class="datetime">2012-03-04</span> posted in [<a href="/blog/category/default" class="category">Default Category</a>]
 </p>
+
 	<div class="article-content">
 	
 	</div>
 </article>
+
 
 
 
@@ -95,20 +98,21 @@
 </div>
 
 <aside>
-	<h2><a href="/">Geniuze</a><a href="/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
+	<h2><a href="/blog/">Geniuze</a><a href="/blog/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
 	
 	<nav class="block">
 		<ul>
-		<li class="default"><a href="/category/default/">Default Category</a></li>
-		<li class="another"><a href="/category/another/">Another Category</a></li>
+		<li class="default"><a href="/blog/category/default/">Default Category</a></li>
+		<li class="another"><a href="/blog/category/another/">Another Category</a></li>
+		<li class="c++"><a href="/blog/category/c++/">c++ Category</a></li>
 		
 		</ul>
 	</nav>
 	
-	<form action="/search/" class="block block-search">
+	<!--form action="/search/" class="block block-search">
 		<h3>Search</h3>
 		<p><input type="search" name="q" placeholder="Search" /></p>
-	</form>
+	</form-->
 	
 	<div class="block block-about">
 		<h3>About</h3>
@@ -123,6 +127,13 @@
 		<h3>Copyright</h3>
 		<p><a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/2.5/cn/" target="_blank" class="hide-target-icon" title="Copyright declaration of site content"><img alt="知识共享许可协议" src="http://i.creativecommons.org/l/by-nc-nd/2.5/cn/88x31.png" /></a></p>
 	</div>
+
+	<div class="block block-links">
+                <h3>links</h3>
+                <p>
+                        <a href="http://www.phonzia.com" target="_blank">大P的博客</a><br>
+                </p>
+        </div>
 	
 	<div class="block block-thank">
 		<h3>Powered by</h3>
@@ -142,14 +153,14 @@
 <script src="http://elfjs.qiniudn.com/code/elf-0.5.0.min.js"></script>
 <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
 
-<script src="/assets/js/site.js"></script>
+<script src="/blog/assets/js/site.js"></script>
 
 <script>
 site.URL_GOOGLE_API = 'http://www.google.com/jsapi';
 site.URL_DISCUS_COMMENT = '' ? 'http://.' : '';
 
 site.VAR_SITE_NAME = 'Geniuze';
-site.VAR_GOOGLE_CUSTOM_SEARCH_ID = '000346898720731947188:13h55x32l0y';
+site.VAR_GOOGLE_CUSTOM_SEARCH_ID = '';
 site.TPL_SEARCH_TITLE = '#{0} / 搜索：#{1}';
 site.VAR_AUTO_LOAD_ON_SCROLL = 2;
 </script>
