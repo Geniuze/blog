@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>Your Site Name</title>
+	<title>Geniuze</title>
 	<link href="http://localhost/atom.xml" rel="self" />
 	<link href="http://localhost/" />
-	<updated>2015-01-09T16:12:03+08:00</updated>
+	<updated>2015-01-09T16:36:04+08:00</updated>
 	<id>http://localhost/</id>
 	<author>
-		<name>Your Name</name>
-		<email>your-email@example.com</email>
+		<name>Geniuze</name>
+		<email>zhang7271@qq.com</email>
 	</author>
 	
 	<entry>
