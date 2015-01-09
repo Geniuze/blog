@@ -1,7 +1,0 @@
----
-layout: post
-title:  "中文测试"
-categories: 
----
-
-这是一个中文博客
