@@ -11,12 +11,14 @@ host: localhost
 desc: Geniuze的博客
 url: http://Geniuze.github.io/blog
 baseurl: /blog
+paginate: 5
 
 custom:
     category:
         default: Default Category
         another: Another Category
         c++: c++ Category
+        markdown: Markdown Category
     categories:
       - name:  default
         title: Default Category
@@ -27,7 +29,10 @@ custom:
       - name: c++
         title: c++ Category
 
-    scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
+      - name: markdown
+        title: Markdown Category
+
+    #scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
 meta:
     author:
