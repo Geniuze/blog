@@ -3,12 +3,31 @@
 	<title>Geniuze</title>
 	<link href="http://localhost/atom.xml" rel="self" />
 	<link href="http://localhost/" />
-	<updated>2015-01-12T09:29:07+08:00</updated>
+	<updated>2015-01-12T11:43:23+08:00</updated>
 	<id>http://localhost/</id>
 	<author>
 		<name>Geniuze</name>
 		<email>zhang7271@qq.com</email>
 	</author>
+	
+	<entry>
+		<title>Hello world!</title>
+		<link href="http://localhost/posts/markdown-highlight.html" />
+		<updated>2015-01-10T00:00:00+08:00</updated>
+		<id>http://localhost/posts/markdown-highlight.html</id>
+		<content type="html"><![CDATA[<p>markdown语法高亮测试</p>
+
+<!-- more -->
+
+<pre><code>int main()
+{
+    printf("hello world!");
+    return 0;
+}
+</code></pre>
+
+]]></content>
+	</entry>
 	
 	<entry>
 		<title>markdown study (2)</title>
