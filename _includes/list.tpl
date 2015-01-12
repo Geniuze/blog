@@ -8,7 +8,7 @@
 	{% if forloop.index == 1 and preview and post.layout == 'post' %}
 		{% if post.content contains "<!-- more -->" %}
 			{{ post.content | split:"<!-- more -->" | first % }}
-			<h4><a href='{{ site.baseurl }}/{{ post.url }}' title='Read more...'>Read more...</a></h4>
+			<h4><a href='{{ site.baseurl }}{{ post.url }}' title='Read more...'>Read more...</a></h4>
 		{% else %}
 			{{ post.content }}
 		{% endif %}

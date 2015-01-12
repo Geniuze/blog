@@ -2,28 +2,22 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8" />
-<meta name="author" content="Geniuze" />
-<meta name="keywords" content="" />
+<meta name="author" content="{{ site.meta.author.name }}" />
+<meta name="keywords" content="{{ page.tags | join: ',' }}" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<title>Geniuze / 搜索</title>
-<link href="http://localhost/feed.xml" rel="alternate" title="Geniuze" type="application/atom+xml" />
+<title>{{ site.name }}{% if page.title %} / {{ page.title }}{% endif %}</title>
+<link href="http://{{ site.host }}/feed.xml" rel="alternate" title="{{ site.name }}" type="application/atom+xml" />
 <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" />
-<link rel="stylesheet" type="text/css" href="/assets/css/site.css" />
-<link rel="stylesheet" type="text/css" href="/assets/css/code/github.css" />
-
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/site.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/code/github.css" />
+{% for style in page.styles %}<link rel="stylesheet" type="text/css" href="{{ style }}" />
+{% endfor %}
 </head>
 
-<body class="page-type-search">
+<body class="{{ page.pageClass }}">
 
 <div class="main">
-	<header>
-	<h1><a href="/" class="minor">Geniuze</a> / 搜索</h1>
-	
-</header>
-
-
-<div id="cse">Loading</div>
-
+	{{ content }}
 
 	<footer>
 		<p>&copy; Since 2012</p>
@@ -31,15 +25,12 @@
 </div>
 
 <aside>
-	<h2><a href="/">Geniuze</a><a href="/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
+	<h2><a href="{{ site.baseurl }}/">{{ site.name }}</a><a href="{{ site.baseurl }}/feed.xml" class="feed-link" title="Subscribe"><i class="fa fa-rss-square"></i></a></h2>
 	
 	<nav class="block">
 		<ul>
-		<li class="default"><a href="/category/default/">Default Category</a></li>
-		<li class="another"><a href="/category/another/">Another Category</a></li>
-		<li class="c++"><a href="/category/c++/">c++ Category</a></li>
-		<li class="markdown"><a href="/category/markdown/">Markdown Category</a></li>
-		
+		{% for category in site.custom.categories %}<li class="{{ category.name }}"><a href="{{ site.baseurl }}/category/{{ category.name }}/">{{ category.title }}</a></li>
+		{% endfor %}
 		</ul>
 	</nav>
 	
@@ -51,8 +42,8 @@
 	<div class="block block-about">
 		<h3>About</h3>
 		<figure>
-			
-			<figcaption><strong>Geniuze</strong></figcaption>
+			{% if site.meta.author.gravatar %}<img src="{{ site.meta.gravatar}}{{ site.meta.author.gravatar }}?s=48" />{% endif %}
+			<figcaption><strong>{{ site.meta.author.name }}</strong></figcaption>
 		</figure>
 		<p>爱好宇宙和平</p>
 	</div>
@@ -66,14 +57,8 @@
                 <h3>Links</h3>
                 <p>
                         <a href="http://www.phonzia.com" target="_blank">大P的博客</a><br>
-                        <a href="http://dyl.gitcafe.com" target="_blank">AL.的博客</a><br>
-                        <a href="http://www.cnblogs.com/alan-forever" target="_blank">Alan-forever</a><br>
-                        <a href="http://www.kiwee.me/" target="_blank">Absolute Zero</a><br>
-                        <a href="http://www.mewx.org/" target="_blank">MewX</a><br>
-                        <a href="http://foursking.github.io/" target="_blank">Setsuna F.Seiei</a><br>
-                        
                 </p>
-    	</div>
+        </div>
 	
 	<div class="block block-thank">
 		<h3>Powered by</h3>
@@ -93,16 +78,17 @@
 <script src="http://elfjs.qiniudn.com/code/elf-0.5.0.min.js"></script>
 <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
 
-<script src="/assets/js/site.js"></script>
-
+<script src="{{ site.baseurl }}/assets/js/site.js"></script>
+{% for script in page.scripts %}<script src="{{ script }}"></script>
+{% endfor %}
 <script>
-site.URL_GOOGLE_API = 'http://www.google.com/jsapi';
-site.URL_DISCUS_COMMENT = '' ? 'http://.' : '';
+site.URL_GOOGLE_API = '{{site.meta.gapi}}';
+site.URL_DISCUS_COMMENT = '{{ site.meta.author.disqus }}' ? 'http://{{ site.meta.author.disqus }}.{{ site.meta.disqus }}' : '';
 
-site.VAR_SITE_NAME = 'Geniuze';
-site.VAR_GOOGLE_CUSTOM_SEARCH_ID = '';
+site.VAR_SITE_NAME = '{{ site.name }}';
+site.VAR_GOOGLE_CUSTOM_SEARCH_ID = '{{ site.meta.author.gcse }}';
 site.TPL_SEARCH_TITLE = '#{0} / 搜索：#{1}';
-site.VAR_AUTO_LOAD_ON_SCROLL = ;
+site.VAR_AUTO_LOAD_ON_SCROLL = {{ site.custom.scrollingLoadCount }};
 </script>
 </body>
 </html>

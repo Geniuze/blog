@@ -9,8 +9,8 @@ name: Geniuze
 #host: http://Geniuze.github.io/blog
 host: localhost
 desc: Geniuze的博客
-url: http://Geniuze.github.io/blog
-baseurl: /
+url: http://www.geniuze.com
+baseurl: 
 paginate: 5
 
 custom:
