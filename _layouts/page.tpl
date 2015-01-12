@@ -58,6 +58,11 @@
                 <p>
                         <a href="http://www.phonzia.com" target="_blank">大P的博客</a><br>
                         <a href="http://dyl.gitcafe.com" target="_blank">AL.的博客</a><br>
+                        <a href="http://www.cnblogs.com/alan-forever" target="_blank">Alan-forever</a><br>
+                        <a href="http://www.kiwee.me/" target="_blank">Absolute Zero</a><br>
+                        <a href="http://www.mewx.org/" target="_blank">MewX</a><br>
+                        <a href="http://foursking.github.io/" target="_blank">Setsuna F.Seiei</a><br>
+                        
                 </p>
     	</div>
 	
