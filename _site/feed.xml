@@ -3,7 +3,7 @@
 	<title>Geniuze</title>
 	<link href="http://localhost/atom.xml" rel="self" />
 	<link href="http://localhost/" />
-	<updated>2015-01-10T13:13:27+08:00</updated>
+	<updated>2015-01-12T09:29:07+08:00</updated>
 	<id>http://localhost/</id>
 	<author>
 		<name>Geniuze</name>
@@ -285,7 +285,7 @@ _   底线
 </code></pre>
 
     <blockquote>
-      <p>上面被识别为列表，为避免这种情况可以在英文句点之前添加反斜杠（’'）:</p>
+      <p>上面被识别为列表，为避免这种情况可以在英文句点之前添加反斜杠（’\‘）:</p>
     </blockquote>
 
     <pre><code>  1986\. What a great season.
