@@ -10,7 +10,7 @@ name: Geniuze
 host: localhost
 desc: Geniuze的博客
 url: http://Geniuze.github.io/blog
-baseurl: /blog
+baseurl: /
 paginate: 5
 
 custom:
