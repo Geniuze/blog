@@ -3,12 +3,126 @@
 	<title>Geniuze</title>
 	<link href="http://localhost/atom.xml" rel="self" />
 	<link href="http://localhost/" />
-	<updated>2015-01-12T21:23:24+08:00</updated>
+	<updated>2015-03-30T23:37:09+08:00</updated>
 	<id>http://localhost/</id>
 	<author>
 		<name>Geniuze</name>
 		<email>zhang7271@qq.com</email>
 	</author>
+	
+	<entry>
+		<title>c++ list</title>
+		<link href="http://localhost/posts/c++list.html" />
+		<updated>2015-03-30T00:00:00+08:00</updated>
+		<id>http://localhost/posts/c++list.html</id>
+		<content type="html"><![CDATA[<p>讲述c++链表实现。</p>
+
+<!-- more -->
+
+<pre><code>typedef int T;
+
+class List{
+    struct Node {
+        T data;
+        Node *next;
+        /*T():0初始化，基本类型为数值的0,其余类型为创建对象不传参数（匿名对像）*/
+        Node(const T&amp; d=T()):data(d), next(NULL){}
+        operator T(){return data;}
+    };
+    Node *head;
+    unsigned int len;
+public:
+    List():head(NULL){}
+    ~List(){clear();}
+    void travel()const
+    {
+        Node *p = head;
+        while(p)
+        {
+            cout &lt;&lt; *p &lt;&lt; " ";
+            p = p-&gt;next;
+        }
+        cout &lt;&lt; endl;
+    }
+    void push_front(const T&amp; d)
+    {
+        insert(d, 0);
+    }
+    List&amp; push_back(const T&amp; d){
+        insert(d, size());
+        return *this;
+    }
+    void clear()
+    {
+        while(size()) erase(0);
+    }
+    Node *&amp; getptr(int pos)
+    {
+        if (pos &lt; 0 || pos &gt; size()) pos = 0;
+        if (pos == 0) return head;
+        Node *p = head;
+        for (int i=1; i&lt;pos; ++i)   p = p-&gt;next;
+        return p-&gt;next;
+    }
+    int find(const T&amp; d){
+        int pos = 0;
+        Node *p = head;
+        while(p){
+            if (p-&gt;data == d)
+                break;
+            p = p-&gt;next;
+            ++pos;
+        }
+        if(p) return pos;
+        else return -1;
+    }
+    void insert(const T&amp; d, int pos)
+    {
+        Node *&amp;p = getptr(pos);
+        Node *pn = new Node(d);
+
+        pn-&gt;next = p;
+        p = pn;
+        ++len;
+        }
+        int size()const {
+            return len;
+    }
+    void erase(int pos) {// 按位置删除
+        if (0&gt;pos||pos&gt;=size()) return;
+        Node *&amp;pn = getptr(pos);
+        Node *p = pn;
+        pn = pn-&gt;next;
+        --len;
+        delete p;
+    }
+    void remove(const T&amp; d){
+        int pos;
+        while((pos = find(d)) != -1){
+            erase(pos);
+        }
+    }
+    void set(int pos, const T&amp; d){
+        if (pos&lt;0||pos&gt;size()) return;
+        Node *p = getptr(pos);
+        p-&gt;data = d;
+    }
+    bool empty()const {return size() == 0;}
+
+    const T&amp; front() {if (empty())throw "空";return head-&gt;data;}
+
+    const T&amp; back() {
+        if (empty()) throw "空";
+        Node *p = head;
+        while(p-&gt;next) p = p-&gt;next;
+        return p-&gt;data;
+    }
+};
+</code></pre>
+
+<p><strong>注：getptr函数返回指向指定结点的指针的引用，可以在insert时直接修改此值达到修 改前一结点的next成员的目的</strong></p>
+]]></content>
+	</entry>
 	
 	<entry>
 		<title>markdown study (2)</title>
