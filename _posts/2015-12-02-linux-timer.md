@@ -1,7 +1,7 @@
 ---
 layout: post
 title: linux一种定时器的实现
-category: c++
+category: linux
 ---
 
 linux一种定时器的实现

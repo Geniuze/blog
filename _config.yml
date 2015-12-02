@@ -19,6 +19,7 @@ custom:
         another: Another Category
         c++: c++ Category
         markdown: Markdown Category
+        linux: linux Category
     categories:
       - name:  default
         title: Default Category
@@ -32,6 +33,8 @@ custom:
       - name: markdown
         title: Markdown Category
 
+      - name: linux
+        title: linux Category
     #scrollingLoadCount: 2                          # 滚屏自动加载文章数量，“0”为关闭
 
 meta:
