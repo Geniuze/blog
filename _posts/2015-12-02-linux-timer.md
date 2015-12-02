@@ -1,6 +1,6 @@
 ---
 layout: post
-title: c++ list
+title: linux一种定时器的实现
 category: c++
 ---
 
