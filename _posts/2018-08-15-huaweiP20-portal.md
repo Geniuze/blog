@@ -4,7 +4,7 @@ title: huaweip20 portal
 category: linux
 ---
 
-讲述c++链表实现。
+华为P20手机不弹PORTAL问题
 
 <!-- more -->
 
