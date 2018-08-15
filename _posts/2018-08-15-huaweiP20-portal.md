@@ -9,7 +9,7 @@ category: linux
 <!-- more -->
 
 
-#环境
+# 环境
 
 - 手机型号手：华为P20
 - 软件版本：8.1
@@ -17,17 +17,17 @@ category: linux
 - 无线AP
 
 
-#portal原理
+# portal原理
 
 - 手机在连接wifi后会自动发起http请求，根据结果确定是否需要弹出PORTAL认证或者直接提示可上网
 
-#手机wifi质量检测
+# 手机wifi质量检测
 - 检测链接：http://connectivitycheck.platform.hicloud.com/generate_204
 - 结果分析：
     - 204：http返回204表示该wifi可以直接上网，不需弹PORTAL认证
     - 非204：表示需要弹PORTAL认证（如果发生无法跳转，则变为不可上网）
 
-#跳转测试
+# 跳转测试
 - 使用302跳转：
 
     GET /generate_204 HTTP/1.1<br>
@@ -57,7 +57,7 @@ Accept-Encoding: gzip<br>
 Content-Type: text/html<br>
 Content-length: 79<br>
 Connection: keep-alive<br>
-
-<!DOCTYPE html><br>
-<script>top.self.location.href=http://192.168.0.1</script>
+<br>
+\<!DOCTYPE html><br>
+\<script>top.self.location.href=http://192.168.0.1\</script>
 > 结论：使用200跳转时，手机会自动弹出PORTAL（自动打开http://192.168.0.1页面）
