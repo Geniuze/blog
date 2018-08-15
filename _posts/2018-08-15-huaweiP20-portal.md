@@ -60,4 +60,5 @@ Connection: keep-alive<br>
 <br>
 \<!DOCTYPE html><br>
 \<script>top.self.location.href=http://192.168.0.1\</script>
+
 > 结论：使用200跳转时，手机会自动弹出PORTAL（自动打开http://192.168.0.1页面）
